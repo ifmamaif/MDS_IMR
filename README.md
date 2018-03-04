@@ -8,4 +8,4 @@ Commit new file
 
   .Commit directly to the master branch   [ nu selectati ]
   .Create a new branch for this commit and start a pull request. Learn more about pull requests. 
-[Alegeti create a new branch => commit /... /merge]
+[Alegeti create a new branch => create pull request => merge pull request ]
