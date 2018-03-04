@@ -6,3 +6,4 @@ Model :
   Requester : cine cere Ifrim/Mihalachi/Rizescu
   Owner : cine face Ifrim/Mihalachi/Rizescu
   Blocker : ce tine ideea blocata / probleme 
+ 
