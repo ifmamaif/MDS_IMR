@@ -8,7 +8,8 @@
   Requester : cine cere Ifrim/Mihalachi/Rizescu 
   Owner : cine face Ifrim/Mihalachi/Rizescu 
   Blocker : ce tine ideea blocata / probleme
-  
+  Estimate : durata presupusa pentru a face/finaliza ideea
+  Priority : prioritate
   
   
   Done : ce am facut ;
