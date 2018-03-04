@@ -1,5 +1,5 @@
 # MDS_IMR
-
+Proiect facut in Unity3d (  https://unity3d.com/  ) [version : 2017.2.1]
 Atentie ! Cand creati/adaugati/pulluri/update uri
 
 LA :
