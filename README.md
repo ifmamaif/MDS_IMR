@@ -1,7 +1,7 @@
 # MDS_IMR VERSION 1.01
 Proiect facut in Unity3d (  https://unity3d.com/  ) [version : 2017.2.1]
 
-BackLog / IceBox in Projects !!!
+BackLog ,IceBox, User stories in Projects !!! 
 
 Comenzi git : 
 git add file
