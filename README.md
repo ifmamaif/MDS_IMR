@@ -1,22 +1,24 @@
-# MDS_IMR VERSION 1.01
+# MDS_IMR VERSION 1.13
 Proiect facut in Unity3d (  https://unity3d.com/  ) [version : 2017.2.1]
-
-
 
 BackLog ,IceBox, User stories in Projects !!! 
 
-Comenzi git : 
-Pentru a descarca proiectul [ proiectul se descarcarca in locatia curenta si se creeaza folderul cu numele repository-ului ] :   
-  git clone https://github.com/ifmamaif/MDS_IMR.git  
-Update repository [ cd folderul repository-ului ] :     
-  git init                                   
-  git pull origin master  
-Modify repository :    
-  git add file      
-  git commit -m "Mesaj cu primul meu commit"     
-  git push origin master      
-New branch:   
-  git checkout -b <branch-name> # Create a new branch and check it out       
-  git push <remote-name> <branch-name> # Where <remote-name> is typically origin    
-History :        
-  Bug on move [Rezolvat]    
+Comenzi git :   
+git init                                                  // iniatialize existense link-repository  
+git pull origin master                                    //     update from repository [ cd folderul repository-ului ] 
+
+git clone https://github.com/ifmamaif/MDS_IMR.git         //     pentru a clona [folder neexistent]   
+git pull origin master                                    //     update local repository     
+
+git add file      
+    OR    
+git add -u                                                //    Add all modified files in git - the easy way
+
+git commit -m "Mesaj cu primul meu commit"     
+git push origin master    
+
+New branch:  
+git checkout -b # Create a new branch and check it out  
+git push # Where is typically origin  
+History :   
+Bug on move [Rezolvat]   
