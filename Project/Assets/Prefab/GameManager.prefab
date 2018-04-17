@@ -33,7 +33,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1109111420072762}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -48,9 +48,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1109111420072762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 305abe412bbc74f45affaf374aa0e476, type: 3}
+  m_Script: {fileID: 11500000, guid: c752ec3601bca4f73aa42e17562e053c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainRows: 18
-  terrainCollums: 32
-  orthosize: 11.17
+  speed: 10
