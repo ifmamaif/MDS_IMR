@@ -58,9 +58,9 @@
      <Compile Include="Assets\Scripts\Land.cs" />
      <Compile Include="Assets\Scripts\MapObject.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-     <None Include="Assets\Resources\mat.txt" />
      <None Include="Assets\Fonts\OFL.txt" />
      <None Include="Assets\Resources\test.txt" />
+     <None Include="Assets\Resources\mat.txt" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/home/maify/IM/MDS/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

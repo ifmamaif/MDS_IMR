@@ -19,9 +19,11 @@ public class Player	: MonoBehaviour	{
 		player = new GameObject ("Player");
 		player.tag= "Player";
 		player.transform.position = new Vector3 (0, 0, -0.1f);	
+		//player.AddComponent<AudioListener> ();
 		player.AddComponent<SpriteRenderer> ();
 		sprite = player.GetComponent<SpriteRenderer>();
 		sprite.sprite = Resources.Load < Sprite	> ("bd02");
+
 	}
 
 	public void Move(short direction,int speed){

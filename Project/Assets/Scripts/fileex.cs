@@ -5,6 +5,7 @@ using UnityEditor;
 using System.IO;
 using System.Text;
 public class fileex : MonoBehaviour {
+	// 15 mb in 3sc scriere , 2sc citire ,,, maxim 20 mb (standarde hamil)
 
 	//public static int gb2tobytes = 2147395600;
     //  int_max     2147483647

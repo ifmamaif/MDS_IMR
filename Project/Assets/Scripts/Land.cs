@@ -15,26 +15,31 @@ public class Land{
 	private int rows;	//	Number of rows in our game board.
 	private int columns;	//	Number of columns in our game board.	
 
-	private int textureSize = 124;	// texturi 124 x 124
+	//private int textureSize = 124;	// texturi 124 x 124
+	private float textureSize = 1.24f;	// texturi 124 x 124
 	private float coordError = 0.5f; // ajustarea pozitiilor in spatiu a elementelor din matrice
 
 	private int toMoveHorizontal=0;
-	private int indiceHorizontal =0;
-	//private int toMoveVertical=0;
+	private int toMoveVertical=0;
 	//private int indiceVertical = 0;
 	//private IEnumerator coroutine; //coroutine = PlayLoop (x, y);StartCoroutine (coroutine);
 
+	private Vector3 initialPosition;
+
 	public Land(Vector2 backScreen)	{
-		rows = (int)(backScreen.y / textureSize) +3;	// +1 pentru eventuale spatiu nefolosit , +2 pentru mutarea liniilor
-		columns = (int)(backScreen.x / textureSize)+ 3;	// +1 pentru eventuale spatiu nefolosit , +2 pentru mutarea coloanelor
+		rows = (int)(backScreen.y / textureSize/100) +3;	// +1 pentru eventuale spatiu nefolosit , +2 pentru mutarea liniilor
+		columns = (int)(backScreen.x / textureSize/100)+ 3;	// +1 pentru eventuale spatiu nefolosit , +2 pentru mutarea coloanelor
+
+		//Debug.Log (rows+" "+columns);
 
 		terrain = new GameObject[rows, columns];
 		boardHolder = new GameObject ("Terrain");		//Instantiate Board and set boardHolder to its transform.
+		initialPosition = boardHolder.transform.position;
 
-
-		string path = "Assets/Resources/test.txt";
-		FileStream f = new FileStream (path, FileMode.Open);
-		int n=f.ReadByte ();
+		//string path = "Assets/Resources/test.txt";
+		//string path = "Assets/Resources/mat.txt";
+		//FileStream f = new FileStream (path, FileMode.Open);
+		//int n=f.ReadByte ();
 
 
 
@@ -46,19 +51,19 @@ public class Land{
 				terrain [x,y].AddComponent<SpriteRenderer> ();
 				SpriteRenderer sprite = terrain[x,y].GetComponent<SpriteRenderer>();
 
-				//int i = Random.Range (0, 3);
-				int i = f.ReadByte();
+				int i = Random.Range (0, 3);
+				//int i = f.ReadByte();
 
-
+				//Debug.Log (x+" "+y+" "+i.ToString ());
 
 				sprite.sprite = Resources.Load <Sprite> (i.ToString());	// as Sprite;
-				terrain[x,y].transform.position = new Vector3((y - (float)columns/2 +coordError) * textureSize/100 , (x - (float)rows/2 +coordError) * textureSize /100);
+				terrain[x,y].transform.position = new Vector3((y - (float)columns/2 +coordError) * textureSize , (x - (float)rows/2 +coordError) * textureSize);
 				terrain [x,y].transform.SetParent (boardHolder.transform);		//Set the parent of our newly instantiated object instance to boardHolder, this is just organizational to avoid cluttering hierarchy.
 			}
 		}
 
 
-		f.Close ();
+		//f.Close ();
 	}
 
 	public void ReSizeLand(Vector2 backScreen)	{
@@ -76,7 +81,7 @@ public class Land{
 				SpriteRenderer sprite = terrain[x,y].GetComponent<SpriteRenderer>();
 				int i = Random.Range (0, 3);
 				sprite.sprite = Resources.Load <Sprite> (i.ToString());	// as Sprite;
-				terrain[x,y].transform.position = new Vector3((y - (float)columns/2 +coordError) * textureSize/100 , (x - (float)rows/2 +coordError) * textureSize /100);
+				terrain[x,y].transform.position = new Vector3((y - (float)columns/2 +coordError) * textureSize , (x - (float)rows/2 +coordError) * textureSize);
 				terrain [x,y].transform.SetParent (boardHolder.transform);		//Set the parent of our newly instantiated object instance to boardHolder, this is just organizational to avoid cluttering hierarchy.
 			}
 		}
@@ -91,30 +96,43 @@ public class Land{
 	public void Move(short move,int speed){		
 
 		if (move == 2) {
-			boardHolder.transform.Translate (0, ((float)textureSize / 100) / speed, 0);
+			boardHolder.transform.Translate (0, textureSize / speed, 0);
 		}
 		if (move == 4) {
-			boardHolder.transform.Translate (((float)textureSize / 100) / speed, 0, 0);
+			boardHolder.transform.Translate (textureSize / speed, 0, 0);
 		}
 		if (move == 6) {
-			boardHolder.transform.Translate (-((float)textureSize / 100) / speed, 0, 0);
+			boardHolder.transform.Translate (-textureSize / speed, 0, 0);
 		}
 		if (move == 8) {
-			boardHolder.transform.Translate (0, -((float)textureSize / 100) / speed, 0);
+			boardHolder.transform.Translate (0, -textureSize / speed, 0);
 		}
-		
-		//Debug.Log (((float)textureSize/100)/speed);
+
+		if (move == 2) {
+			if (	(int)(boardHolder.transform.position.y/ textureSize )	!=	(int)(initialPosition.y/ textureSize )	) {				
+				int deMutat = rows - 1 - toMoveVertical;
+				int inainteDe = (rows - toMoveVertical) % rows;
+				for (int i = 0; i < columns; i++) {					
+					terrain [deMutat, i].transform.position = new Vector3 (
+						terrain [inainteDe, i].transform.position.x ,
+						terrain [inainteDe, i].transform.position.y - textureSize, 
+						0);
+				}
+				toMoveVertical++;
+				if (toMoveVertical == rows) {
+					toMoveVertical = 0;
+				}
+				initialPosition = boardHolder.transform.position;
+			}
+		}
 
 		if (move == 4) {
-			//Debug.Log ("4 start");
-			indiceHorizontal++;
-			if (indiceHorizontal % (speed) == 0) {				
+			if (	(int)(boardHolder.transform.position.x/ textureSize )	!=	(int)(initialPosition.x/ textureSize )	) {				
 				int deMutat = columns - 1 - toMoveHorizontal;
 				int inainteDe = (columns - toMoveHorizontal) % columns;
-				//Debug.Log (deMutat + " " + inainteDe);
 				for (int i = 0; i < rows; i++) {					
 					terrain [i, deMutat].transform.position = new Vector3 (
-						terrain [i, inainteDe].transform.position.x - ((float)textureSize)/100,
+						terrain [i, inainteDe].transform.position.x - textureSize,
 						terrain [i, inainteDe].transform.position.y, 
 						0);
 				}
@@ -122,21 +140,17 @@ public class Land{
 				if (toMoveHorizontal == columns) {
 					toMoveHorizontal = 0;
 				}
-				indiceHorizontal = 0;
+				initialPosition = boardHolder.transform.position;
 			}
-			//Debug.Log ("4 end");
 		}
 
 		if (move == 6) {
-			//Debug.Log ("6 start");
-			indiceHorizontal--;
-			if (indiceHorizontal % (speed) == 0) {				
+			if (	(int)(boardHolder.transform.position.x/ textureSize )	!=	(int)(initialPosition.x/ textureSize )	) {						
 				int deMutat = (columns - toMoveHorizontal) % columns;
 				int inainteDe = columns - 1 - toMoveHorizontal;
-				//Debug.Log (deMutat + " " + inainteDe);
 				for (int i = 0; i < rows; i++) {					
 					terrain [i, deMutat].transform.position = new Vector3 (
-						terrain [i, inainteDe].transform.position.x + ((float)textureSize)/100,
+						terrain [i, inainteDe].transform.position.x + textureSize,
 						terrain [i, inainteDe].transform.position.y, 
 						0);
 				}
@@ -144,10 +158,30 @@ public class Land{
 				if (toMoveHorizontal == -1) {
 					toMoveHorizontal = columns - 1;
 				}
-				indiceHorizontal = 0;
+				initialPosition = boardHolder.transform.position;
 			}
-			//Debug.Log ("6 end");
 		}
-		
+
+		if (move == 8) {
+			if (	(int)(boardHolder.transform.position.y/ textureSize )	!=	(int)(initialPosition.y/ textureSize )	) {				
+				int deMutat = (rows - toMoveVertical) % rows;
+				int inainteDe = rows - 1 - toMoveVertical;
+				for (int i = 0; i < columns; i++) {					
+					terrain [deMutat, i].transform.position = new Vector3 (
+						terrain [inainteDe, i].transform.position.x ,
+						terrain [inainteDe, i].transform.position.y + textureSize, 
+						0);
+				}
+				toMoveVertical--;
+				if (toMoveVertical == -1) {
+					toMoveVertical = rows-1;
+				}
+				initialPosition = boardHolder.transform.position;
+			}
+		}
+
+
+
 	}
+
 }
