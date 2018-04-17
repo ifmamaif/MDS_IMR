@@ -5,9 +5,9 @@ BackLog ,IceBox, User stories in Projects !!!
 
 Comenzi git :   
 git init                                                  // iniatialize existense link-repository  
-git pull origin master                                    //     update from repository 
+git pull origin master                                    //     update from repository [ cd folderul repository-ului ] 
 
-git clone link                                            //     pentru a clona [folder neexistent]   
+git clone https://github.com/ifmamaif/MDS_IMR.git         //     pentru a clona [folder neexistent]   
 git pull origin master                                    //     update local repository     
 
 git add file      
@@ -16,3 +16,9 @@ git add -u                                                //    Add all modified
 
 git commit -m "Mesaj cu primul meu commit"     
 git push origin master    
+
+New branch:  
+git checkout -b # Create a new branch and check it out  
+git push # Where is typically origin  
+History :   
+Bug on move [Rezolvat]   
