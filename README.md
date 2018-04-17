@@ -15,7 +15,7 @@ Modify repository :
   git add file      
   git commit -m "Mesaj cu primul meu commit"     
   git push origin master      
-New branch:
+New branch:   
   git checkout -b <branch-name> # Create a new branch and check it out    
   git push <remote-name> <branch-name> # Where <remote-name> is typically origin
 History :
