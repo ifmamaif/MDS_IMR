@@ -19,6 +19,6 @@ git push origin master
 
 New branch:  
 git checkout -b # Create a new branch and check it out  
-git push # Where is typically origin  
+git push -u origin my_branch # Where is typically origin  
 History :   
 Bug on move [Rezolvat]   
