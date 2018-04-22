@@ -1,4 +1,4 @@
-# MDS_IMR VERSION 1.13
+# MDS_IMR VERSION 2.00
 Proiect facut in Unity3d (  https://unity3d.com/  ) [version : 2017.2.1]
 
 BackLog ,IceBox, User stories in Projects !!! 
@@ -13,9 +13,10 @@ git pull origin master                                    //     update local re
 git add file      
     OR    
 git add -u                                                //    Add all modified files in git - the easy way
+git add -A                           // This adds, modifies, and removes index entries to match the working tree.   
 
 git commit -m "Mesaj cu primul meu commit"     
-git push origin master    
+git push origin branch    
 
 New branch:  
 git checkout -b # Create a new branch and check it out  
