@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 public class Game : MonoBehaviour {
-	private CameraManager cam;
-	private Land terrain;
-	private Player player;
-	private InputManager input;
+	public CameraManager cam;
+	public Land terrain;
+	public Player player;
+	public InputManager input;
 	public int speed = 10;
 	public delegate void ExampleDelegate (short move);
+	public AudioSource audiomanager;
 
 
 	void Start () {
@@ -16,7 +17,11 @@ public class Game : MonoBehaviour {
 		//ReSizeLand (backScreen);
 		player = gameObject.AddComponent<Player>();
 		input = new InputManager (terrain,player);
-
+		gameObject.AddComponent<AudioSource> ();
+		audiomanager = gameObject.GetComponent<AudioSource> ();
+		audiomanager.clip = Resources.Load<AudioClip> ("Audio/Dynasty Wars - Shinyang Castle (round 7)");
+		audiomanager.Play ();
+		audiomanager.loop = true;
 	}
 	
 	// Update is called once per frame

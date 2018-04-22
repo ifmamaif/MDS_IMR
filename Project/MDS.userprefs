@@ -1,10 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Land.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Game.cs">
     <Files>
-      <File FileName="Assets/Scripts/Game.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Land.cs" Line="148" Column="89" />
-      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Game.cs" Line="24" Column="28" />
+      <File FileName="Assets/Scripts/Land.cs" Line="67" Column="59" />
+      <File FileName="Assets/Scripts/Player.cs" Line="20" Column="3" />
+      <File FileName="Assets/Scripts/InputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Interactable.cs" Line="10" Column="38" />
+      <File FileName="Assets/Scripts/ItemPickUp.cs" Line="10" Column="3" />
+      <File FileName="Assets/Scripts/TestCollision.cs" Line="20" Column="3" />
+      <File FileName="Assets/Scripts/Item.cs" Line="10" Column="31" />
+      <File FileName="Assets/Scripts/Inventory.cs" Line="39" Column="36" />
+      <File FileName="Assets/Scripts/InventorySlot.cs" Line="32" Column="16" />
+      <File FileName="Assets/Scripts/InventoryUI.cs" Line="15" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;	//Allows us to use UI.
-using UnityEngine.SceneManagement;
 
 public class Player	: MonoBehaviour	{
 	private GameObject player;	 
 	private SpriteRenderer sprite;
 	private int timeAnimation = 0;
+
 
 	short move = 0;
 
@@ -18,11 +17,21 @@ public class Player	: MonoBehaviour	{
 	public void Start(){
 		player = new GameObject ("Player");
 		player.tag= "Player";
-		player.transform.position = new Vector3 (0, 0, -0.1f);	
-		//player.AddComponent<AudioListener> ();
+		player.transform.position = new Vector3 (0, 0, -0.1f);
+
 		player.AddComponent<SpriteRenderer> ();
 		sprite = player.GetComponent<SpriteRenderer>();
 		sprite.sprite = Resources.Load < Sprite	> ("bd02");
+
+		player.AddComponent<AudioListener> ();
+
+		player.AddComponent<BoxCollider2D> ();
+		player.GetComponent<BoxCollider2D> ().size = new Vector2 (1.02f, 1.24f);
+
+		player.AddComponent<Rigidbody2D> ();
+		player.GetComponent<Rigidbody2D> ().isKinematic = true;
+
+		player.AddComponent<TestCollision> ();
 
 	}
 
@@ -30,9 +39,12 @@ public class Player	: MonoBehaviour	{
 		move = direction;
 		if (coroutineEnabled == false) {
 			//Debug.Log (speed);
-			StartCoroutine ("PlayLoop",((float)speed) / 750); 
+			StartCoroutine ("PlayLoop",((float)speed) / 1000); 
 			coroutineEnabled = true;
-		} 	
+		} 
+
+		//Ray ray = new Vector2(player.transform.position.x,player.transform.position.y);
+
 	}
 
 	private IEnumerator PlayLoop(float speed)
@@ -79,6 +91,24 @@ public class Player	: MonoBehaviour	{
 				sprite.sprite = Resources.Load<Sprite> ("br03");
 				timeAnimation = 0;
 			}
+		}
+	}
+
+	void Interact(){
+		//We create a ray
+		//Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+		//Ray ray = player.transform.position;
+		Vector3 fwd = player.transform.TransformDirection(Vector3.forward);
+		Vector3 sourcefrom = player.transform.position;
+		RaycastHit hit;
+		// if the ray hits
+		if (Physics.Raycast (sourcefrom,fwd, out hit, 100)) {
+			Debug.Log("We hit somethign!");
+			//Interactable interactable = hit.collider.GetComponent<Interactable>;
+
+			//if (Interactable != null) {
+				// do something
+			//}
 		}
 	}
 }

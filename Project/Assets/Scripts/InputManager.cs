@@ -68,5 +68,6 @@ public class InputManager {
 
 		player.Move (move,speed);
 		terrain.Move (move,speed);
+
 	}
 }

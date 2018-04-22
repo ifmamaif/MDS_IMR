@@ -62,6 +62,9 @@ public class Land{
 			}
 		}
 
+		AddBlock (boardHolder.transform,new Vector3(-1,-1,-0.05f),"Item1");
+		AddBlock (boardHolder.transform,new Vector3(-3,-1,-0.05f),"Item2");
+		AddBlock (boardHolder.transform,new Vector3(-2,-1,-0.05f),"Item3");
 
 		//f.Close ();
 	}
@@ -184,4 +187,20 @@ public class Land{
 
 	}
 
+
+	void AddBlock(Transform boardHolder,Vector3 pos,string name){
+		
+		GameObject obj = new GameObject(name);
+		//obj.transform.position = new Vector3 (-1, -1, -0.05f);
+		obj.transform.position = pos;
+		obj.AddComponent<SpriteRenderer> ();
+		obj.GetComponent<SpriteRenderer>().sprite = Resources.Load <Sprite> ("cheie");	// as Sprite;
+		obj.AddComponent<BoxCollider2D>();
+		obj.GetComponent<BoxCollider2D> ().isTrigger = true;
+		obj.AddComponent<ItemPickUp> ();
+		obj.GetComponent<ItemPickUp> ().item = Resources.Load<Item> ("Items/Helmet");
+		//obj.AddComponent<Interactable> ();
+		//obj.AddComponent<TestCollision>();
+		obj.transform.SetParent (boardHolder);	
+	}
 }
