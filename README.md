@@ -12,7 +12,7 @@ git pull origin master                                    //     update local re
 
 git add file      
     OR    
-git add -u                                                //    Add all modified files in git - the easy way
+git add -u                                                //    Add all modified files in git - the easy way    
 git add -A                           // This adds, modifies, and removes index entries to match the working tree.   
 
 git commit -m "Mesaj cu primul meu commit"     
