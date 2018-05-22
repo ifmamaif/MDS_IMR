@@ -2,9 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainMenu/MenuSystem.cs">
     <Files>
-      <File FileName="Assets/Scripts/MainMenu/MenuSystem.cs" Line="142" Column="79" />
-      <File FileName="Assets/Scripts/GameSystem.cs" Line="37" Column="36" />
-      <File FileName="Assets/Scripts/Terrain/Land.cs" Line="57" Column="54" />
+      <File FileName="Assets/Scripts/MainMenu/MenuSystem.cs" Line="150" Column="20" />
+      <File FileName="Assets/Scripts/Player.cs" Line="91" Column="53" />
+      <File FileName="Assets/Scripts/Terrain/Land.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
