@@ -1524,8 +1524,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1571,7 +1571,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114266712453712224}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -1603,8 +1603,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1630,8 +1630,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1704,7 +1704,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114680623227293792}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -1736,8 +1736,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1752,10 +1752,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1588415259044786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114599229115212106}
+  icon: {fileID: 114166212833771826}
   removeButton: {fileID: 114446300389979386}
 --- !u!114 &114061292228995288
 MonoBehaviour:
@@ -1776,8 +1776,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1803,8 +1803,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1819,10 +1819,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1078322836865674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114001799327596524}
+  icon: {fileID: 114361862271506672}
   removeButton: {fileID: 114671504160746092}
 --- !u!114 &114068092595614184
 MonoBehaviour:
@@ -1891,7 +1891,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114266712453712224}
-        m_MethodName: OnRemoveButton
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1922,8 +1922,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1969,8 +1969,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114671571623527876}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2021,7 +2021,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114975246643177736}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -2073,8 +2073,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114840785597490968}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2126,8 +2126,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2173,8 +2173,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114736169629756172}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2225,7 +2225,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114235371063350720}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -2246,7 +2246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1648982676033904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 889c8aeb3ec2d47848313551d5206fe3, type: 3}
+  m_Script: {fileID: 11500000, guid: e4f12f7cfae7e4f738e1b8f970215420, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemsParent: {fileID: 224469196307239218}
@@ -2270,8 +2270,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2297,8 +2297,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2324,8 +2324,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2351,8 +2351,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c1b5fe5ebddd3104c89ddcb287048b12, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 70d14e3cc86e341fdbb29e268b377158, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2405,8 +2405,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2481,10 +2481,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1892275844514270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114785327770340148}
+  icon: {fileID: 114019607616668970}
   removeButton: {fileID: 114988336525612504}
 --- !u!114 &114231258655809208
 MonoBehaviour:
@@ -2505,8 +2505,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2521,10 +2521,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1229453595269192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114588041302122580}
+  icon: {fileID: 114063466730579472}
   removeButton: {fileID: 114667668414314758}
 --- !u!114 &114240022641583138
 MonoBehaviour:
@@ -2561,10 +2561,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1441918178259634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114687024114863074}
+  icon: {fileID: 114929070712304468}
   removeButton: {fileID: 114908460751861078}
 --- !u!114 &114251893921913244
 MonoBehaviour:
@@ -2605,8 +2605,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114395049094539482}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2626,10 +2626,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1128075875618556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114068092595614184}
+  icon: {fileID: 114298438026969996}
   removeButton: {fileID: 114079312517177858}
 --- !u!114 &114271069667534462
 MonoBehaviour:
@@ -2650,8 +2650,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2677,8 +2677,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2693,10 +2693,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750974527049154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114968157209626470}
+  icon: {fileID: 114676317958017582}
   removeButton: {fileID: 114434536540141964}
 --- !u!114 &114297672041573162
 MonoBehaviour:
@@ -2737,7 +2737,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114840785597490968}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -2769,8 +2769,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2796,8 +2796,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2893,7 +2893,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114251501704808524}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -2925,8 +2925,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2941,10 +2941,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1780234625909566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114405057318032688}
+  icon: {fileID: 114790867662613072}
   removeButton: {fileID: 114826043260896194}
 --- !u!114 &114374118742958412
 MonoBehaviour:
@@ -2965,8 +2965,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2992,8 +2992,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3039,8 +3039,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114762143406239660}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3060,10 +3060,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1381609334101748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114203914760630246}
+  icon: {fileID: 114587763338438294}
   removeButton: {fileID: 114251893921913244}
 --- !u!114 &114405057318032688
 MonoBehaviour:
@@ -3131,8 +3131,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114759583843128248}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3183,7 +3183,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114854806349187938}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -3215,8 +3215,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3231,10 +3231,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1982379936903002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114506279053349620}
+  icon: {fileID: 114086764237565988}
   removeButton: {fileID: 114816949676072568}
 --- !u!114 &114431087518330604
 MonoBehaviour:
@@ -3275,8 +3275,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114975246643177736}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3327,8 +3327,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114290780713771128}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3379,8 +3379,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114051369299135146}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3411,8 +3411,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3458,7 +3458,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114290780713771128}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -3510,7 +3510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114818200410695642}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -3616,8 +3616,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114680623227293792}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3668,7 +3668,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114366772931183844}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -3720,7 +3720,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114063827234721328}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -3772,7 +3772,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114759583843128248}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -3824,8 +3824,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114854806349187938}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3856,8 +3856,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3883,8 +3883,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3910,8 +3910,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3957,8 +3957,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114818200410695642}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3989,8 +3989,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4063,7 +4063,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114762143406239660}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -4169,7 +4169,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114215087421124616}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -4221,7 +4221,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114051369299135146}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -4253,8 +4253,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4280,8 +4280,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4327,8 +4327,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114235371063350720}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4379,8 +4379,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114063827234721328}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4400,10 +4400,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048739927829798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114873614335931996}
+  icon: {fileID: 114061292228995288}
   removeButton: {fileID: 114088923898411198}
 --- !u!114 &114676123740722022
 MonoBehaviour:
@@ -4451,8 +4451,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4467,10 +4467,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1575066907537986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114240022641583138}
+  icon: {fileID: 114018429385680438}
   removeButton: {fileID: 114517231134361020}
 --- !u!114 &114682604493017296
 MonoBehaviour:
@@ -4511,7 +4511,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114736169629756172}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -4597,8 +4597,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4667,8 +4667,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4683,10 +4683,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1084591818845182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114713123246829990}
+  icon: {fileID: 114933144361297096}
   removeButton: {fileID: 114160370201337632}
 --- !u!114 &114738302680706306
 MonoBehaviour:
@@ -4707,8 +4707,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4723,10 +4723,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1396488833788770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114355978403525986}
+  icon: {fileID: 114960644354521562}
   removeButton: {fileID: 114405918052468484}
 --- !u!114 &114762143406239660
 MonoBehaviour:
@@ -4736,10 +4736,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429978952908746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114596744527906386}
+  icon: {fileID: 114420762967081834}
   removeButton: {fileID: 114392976590511028}
 --- !u!114 &114767814134465764
 MonoBehaviour:
@@ -4760,8 +4760,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4814,8 +4814,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4861,7 +4861,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114671571623527876}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -4913,8 +4913,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114425297261879922}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4934,10 +4934,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1236091180356042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114676123740722022}
+  icon: {fileID: 114694666237152048}
   removeButton: {fileID: 114585430045012234}
 --- !u!114 &114826043260896194
 MonoBehaviour:
@@ -4978,8 +4978,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114366772931183844}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5030,7 +5030,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114425297261879922}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -5051,10 +5051,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1602925781058620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114035602961430192}
+  icon: {fileID: 114374118742958412}
   removeButton: {fileID: 114120753163617136}
 --- !u!114 &114845360116629808
 MonoBehaviour:
@@ -5075,8 +5075,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5091,10 +5091,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1412823431189034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114686460341787182}
+  icon: {fileID: 114198200124564924}
   removeButton: {fileID: 114543377985677028}
 --- !u!114 &114859200991326396
 MonoBehaviour:
@@ -5135,7 +5135,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114904323065074304}
+      - m_Target: {fileID: 114395049094539482}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -5194,8 +5194,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5210,10 +5210,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1212608184797154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114486543406858084}
+  icon: {fileID: 114988602326723466}
   removeButton: {fileID: 114998572630997938}
 --- !u!114 &114908460751861078
 MonoBehaviour:
@@ -5254,8 +5254,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114251501704808524}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5286,8 +5286,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5365,8 +5365,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5392,8 +5392,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5419,8 +5419,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5462,10 +5462,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1923924563302192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114183220656175182}
+  icon: {fileID: 114767814134465764}
   removeButton: {fileID: 114431087518330604}
 --- !u!114 &114988336525612504
 MonoBehaviour:
@@ -5506,8 +5506,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114215087421124616}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5538,8 +5538,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5585,8 +5585,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114904323065074304}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114266712453712224}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

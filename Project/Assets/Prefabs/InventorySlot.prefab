@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224013507158527788}
-  - component: {fileID: 114798934150076450}
+  - component: {fileID: 114213892553907614}
   m_Layer: 5
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -99,8 +99,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 869b18e2f1f4de14aac68bb4740e1fd4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 21e7c2ea2b4e949a5b58db6970ed493b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -126,14 +126,27 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f245661d5e9f9234a89d516a497c282e, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 03db6804c33e547329d4d6ab057b2e66, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114213892553907614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269015349907780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac796ccea886647aa959715fc1244046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 114329279545480694}
+  removeButton: {fileID: 114911243632670848}
 --- !u!114 &114329279545480694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,7 +213,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114798934150076450}
+      - m_Target: {fileID: 114213892553907614}
         m_MethodName: UserItem
         m_Mode: 1
         m_Arguments:
@@ -213,19 +226,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114798934150076450
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1269015349907780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa3b6bbd6208d4bada0e73eed26acb8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 114329279545480694}
-  removeButton: {fileID: 114911243632670848}
 --- !u!114 &114911243632670848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,8 +265,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114798934150076450}
-        m_MethodName: OnRemoveButton
+      - m_Target: {fileID: 114213892553907614}
+        m_MethodName: ClearSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

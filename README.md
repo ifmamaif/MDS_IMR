@@ -1,4 +1,4 @@
-# MDS_IMR VERSION 3.9
+# MDS_IMR VERSION 4.0
 Proiect facut in Unity3d (  https://unity3d.com/  ) [version : 2017.2.1]    
 Documentation source : https://docs.google.com/document/d/1lndvt1ZwLoUetggxmoFP4785ORwKw5R46sI_UFCMvVo/edit?usp=sharing             
 BackLog ,IceBox, User stories in Projects !!! 
@@ -9,7 +9,7 @@ git clone https://github.com/ifmamaif/MDS_IMR.git         //     pentru a clona 
 git pull origin master                                    //     update local repository     
 
 git init
-git remove -v //    to check if is not null , if is null go the next line , if is not null go second next line  
+git remote -v //    to check if is not null , if is null go the next line , if is not null go second next line  
 git remote add origin [//your github url]
 git checkout -b your_branch_name # Create a new branch and check it out  
 git add -A  
