@@ -11,7 +11,6 @@ public class MenuSystem : MonoBehaviour {
 	public GameObject newGame;
 	public GameObject savedGames;
 	public GameObject exitMessage;
-
 	public GameObject newCharacter;
 	public GameObject alertMessage;
 
@@ -21,6 +20,7 @@ public class MenuSystem : MonoBehaviour {
 	public GameObject contentSavedGames;
 	public GameObject verticalScrollBarSavedGames;
 
+	private bool isVisibleSavedGames = false;
 	// Use this for initialization
 	void Start () {
 		mainMenu.SetActive (true);
@@ -28,7 +28,7 @@ public class MenuSystem : MonoBehaviour {
 		newGame.SetActive (false);
 		newCharacter.SetActive (false);
 		alertMessage.SetActive (false);
-
+		isVisibleSavedGames = false;
 	}
 
 	/*
@@ -37,6 +37,32 @@ public class MenuSystem : MonoBehaviour {
 		
 	}
 	*/
+	private Vector2 scrollViewVector = Vector2.zero;
+	private Vector2 guiDimension = new Vector2(410,340);
+	private float longlist = 0;
+	private int n = 4;
+
+	void OnGUI(){
+		if (isVisibleSavedGames == true) {
+			// Begin the ScrollView
+			scrollViewVector = GUI.BeginScrollView (new Rect (Screen.width / 2 - guiDimension.x / 2, Screen.height / 2 - guiDimension.y / 2, guiDimension.x, guiDimension.y), scrollViewVector, new Rect (0, 0, 0, longlist));
+
+			//Bottom right group of buttons
+			GUI.BeginGroup (new Rect (0, 0, guiDimension.x, longlist));
+			//Loop through each target
+			for (int i = 0; i < listSavedGames.Length; i++) {
+				//print("Button " + (i + 1).ToString() + " created: " + new Rect((i * 100), 0, 100, 50).ToString());
+				//Create a button for each target, loading the attached script with source and target coordinates
+				if (GUI.Button (	new Rect (	0, (i * 60) + (i * 10), guiDimension.x - 30, 60	) ,	listSavedGames[i]	)	) {
+					Debug.Log ("You pressed "+ listSavedGames[i]);
+				}
+			}
+			GUI.EndGroup ();
+
+			// End the ScrollView
+			GUI.EndScrollView ();
+		}
+	}
 
 	public void BackToMainMenuFromExit(){
 		mainMenu.transform.localPosition= new Vector3 (0, 0, 0);
@@ -103,6 +129,7 @@ public class MenuSystem : MonoBehaviour {
 			f.Write (byteArray,0,byteArray.Length);
 			//SceneManager.LoadScene (1);
 			f.Close ();
+			Debug.Log (name + " Character Saved!");
 		} else {
 			alertMessage.transform.localPosition= new Vector3 (0, 0, 0);
 			newCharacter.SetActive (false);
@@ -119,45 +146,18 @@ public class MenuSystem : MonoBehaviour {
 		for(int i=0;i<listSavedGames.Length;i++){
 			listSavedGames[i] = Filter (listSavedGames[i]);
 		}
-
-		RectTransform rectr = contentSavedGames.GetComponent<RectTransform>();
-		if (rectr.sizeDelta.y < (listSavedGames.Length * 16 + 4)) {
-			rectr.sizeDelta = new Vector2 (rectr.sizeDelta.x, listSavedGames.Length * 16 + 4);
+		isVisibleSavedGames = true;
+		int dimensiune = listSavedGames.Length * 70;
+		if (dimensiune > guiDimension.y) {
+			longlist = dimensiune + 10;
+		} else {
+			longlist = guiDimension.y;
 		}
 
-		float pozY = rectr.transform.position.y - 10;	//	rectTransform.transform.position.y - button.recttransform.sizedelta.y/2 - 2;
-
-		for (int i = 0; i < listSavedGames.Length; i++) {
-			GameObject  child = (GameObject)Instantiate(Resources.Load("Prefabs/ButtonLoadCharacter",typeof(GameObject)));
-			child.name = listSavedGames [i];
-			child.transform.GetChild(0).gameObject.GetComponent<Text>().text = listSavedGames [0];
-			child.transform.SetParent(contentSavedGames.transform);
-			RectTransform childrectr = child.GetComponent<RectTransform> ();
-			childrectr.sizeDelta = new Vector2 (81, 16);
-			//childrectr.position = new Vector3 (-1,pozY+16*i, 0);
-			child.transform.position = new Vector3(0,0,0);
-			childrectr.localScale = new Vector3 (1, 1, 1);
-			//child.transform.localPosition = new Vector3 (-1,pozY+16*i, 0);
-			//child.transform.localScale = new Vector3 (1, 1, 1);
-			Debug.Log("child "+i+" "+childrectr.position+ " "+ child.transform.position);
-		}
-
-		//	inventoryUI = (GameObject)Instantiate(Resources.Load("Prefabs/InventoryUI",typeof(GameObject)));
-		//	inventoryUI.name = "InventoryUI";
-		//	GameObject  ChildGameObject2 = ParentGameObject.transform.GetChild (1).gameObject;
-
-
-		verticalScrollBarSavedGames.GetComponent<Scrollbar> ().value = 1;
-
-		//listSavedGames = Directory.GetFileSystemEntries(Application.dataPath+ "/Resources/Saved","*.data");
-
-		//Debug.Log( Directory.GetFiles (Application.dataPath+ "/Resources/Saved"));
-		//Debug.Log (System.AppDomain.CurrentDomain.BaseDirectory);	//NULL
-		//Debug.Log(Environment.CurrentDirectory);
-		//Debug.Log (Application.dataPath);	//	/home/maify/IM/Mds/Assets
 	}
 
 	public void BackToMainMenuFromSavedGames(){		
+		isVisibleSavedGames = false;
 		savedGames.SetActive (false);
 		mainMenu.SetActive (true);
 	}

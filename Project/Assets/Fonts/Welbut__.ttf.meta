@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: 1284d3196db1042eca7215eee528cc46
+guid: 68661f7ec05074c9a859315b0ad182d4
+timeCreated: 1527003286
+licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 128
+  fontSize: 124
   forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
-  includeFontData: 0
+  includeFontData: 1
   fontName: Wellbutrin
   fontNames:
   - Wellbutrin
@@ -15,8 +17,7 @@ TrueTypeFontImporter:
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 1
-  shouldRoundAdvanceValue: 1
+  useLegacyBoundsCalculation: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
