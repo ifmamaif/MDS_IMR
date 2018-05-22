@@ -1,4 +1,4 @@
-# MDS_IMR VERSION 1.13
+# MDS_IMR VERSION 2.00
 Proiect facut in Unity3d (  https://unity3d.com/  ) [version : 2017.2.1]
 
 BackLog ,IceBox, User stories in Projects !!! 
