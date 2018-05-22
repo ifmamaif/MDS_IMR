@@ -8,7 +8,7 @@ git init                                                  // iniatialize existen
 git clone https://github.com/ifmamaif/MDS_IMR.git         //     pentru a clona [folder neexistent]   
 git pull origin master                                    //     update local repository     
 
-git init
+git init    
 git remote -v //    to check if is not null , if is null go the next line , if is not null go second next line  
 git remote add origin [//your github url]
 git checkout -b your_branch_name # Create a new branch and check it out  
