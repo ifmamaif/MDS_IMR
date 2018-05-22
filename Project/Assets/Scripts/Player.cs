@@ -58,7 +58,8 @@ public class Player	{
 			direction = 2;
 		else 
 			direction =0;
-		animator.SetInteger ("direction", direction);
+		//Debug.Log (direction);
+		animator.SetInteger ("da", direction);
 	}
 
 	/*

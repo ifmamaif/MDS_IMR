@@ -30,6 +30,7 @@ public class GameSystem : MonoBehaviour {
 		audiomanager.enabled = false; // !! keep it true for testing or release . !!
 
 		*/
+
 		Inventory inventory = new Inventory ();
 		inventory.Space = 20;
 

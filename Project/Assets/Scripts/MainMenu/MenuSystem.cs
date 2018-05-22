@@ -13,14 +13,21 @@ public class MenuSystem : MonoBehaviour {
 	public GameObject exitMessage;
 	public GameObject newCharacter;
 	public GameObject alertMessage;
+	public GameObject settings;
 
 	public GameObject nameCharacterInputField;
 
-	public string[] listSavedGames;
-	public GameObject contentSavedGames;
-	public GameObject verticalScrollBarSavedGames;
-
+	private string[] listSavedGames;
+	//public GameObject contentSavedGames;
+	//public GameObject verticalScrollBarSavedGames;
 	private bool isVisibleSavedGames = false;
+	private Vector2 scrollViewVector = Vector2.zero;
+	private Vector2 guiDimension = new Vector2(410,340);
+	private float longlist = 0;
+
+	public GameObject soundButton;
+	private bool isSoundMuted = false;
+
 	// Use this for initialization
 	void Start () {
 		mainMenu.SetActive (true);
@@ -37,10 +44,7 @@ public class MenuSystem : MonoBehaviour {
 		
 	}
 	*/
-	private Vector2 scrollViewVector = Vector2.zero;
-	private Vector2 guiDimension = new Vector2(410,340);
-	private float longlist = 0;
-	private int n = 4;
+
 
 	void OnGUI(){
 		if (isVisibleSavedGames == true) {
@@ -176,6 +180,32 @@ public class MenuSystem : MonoBehaviour {
 			result += stringSource[i];
 		}
 		return result;
+	}
+
+	public void SoundVolume(){
+		if (isSoundMuted == false) {
+			isSoundMuted = true;
+			//soundButton.GetComponent<Image> ().over
+			//soundButton.GetComponent<Image>().overrideSprite = MyNewSprite;
+			soundButton.GetComponent<Image>().overrideSprite = Resources.Load<Sprite> ("Sprites/UI/1");
+			//soundButton.GetComponent<Image> ().sprite = Resources.Load<Sprite> ("UI/1");
+		} else {
+			isSoundMuted = false;
+			//soundButton.GetComponent<Image> ().sprite = Resources.Load<Sprite> ("UI/0");
+			soundButton.GetComponent<Image>().overrideSprite = Resources.Load<Sprite> ("Sprites/UI/0");
+		}
+	}
+
+
+	public void BackToMainMenuFromSettings(){
+		mainMenu.SetActive (true);
+		settings.SetActive (false);
+	}
+
+	public void ToSettings(){		
+		settings.transform.localPosition= new Vector3 (0, 0, 0);
+		mainMenu.SetActive (false);
+		settings.SetActive (true);
 	}
 }
 	
