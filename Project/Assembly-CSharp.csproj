@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera\CameraManager.cs" />
+     <Compile Include="Assets\Scripts\fileio.cs" />
      <Compile Include="Assets\Scripts\GameSystem.cs" />
      <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
@@ -66,6 +67,7 @@
      <Compile Include="Assets\Scripts\Terrain\Land.cs" />
      <Compile Include="Assets\Scripts\Test\exampleLand.cs" />
      <Compile Include="Assets\Scripts\Test\fileex.cs" />
+     <Compile Include="Assets\Scripts\Test\Landv2.cs" />
      <Compile Include="Assets\Scripts\Test\MapObject.cs" />
      <Compile Include="Assets\Scripts\Test\Move.cs" />
      <Compile Include="Assets\Scripts\Test\PerlinNoise.cs" />
