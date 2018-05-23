@@ -62,12 +62,12 @@
      <Compile Include="Assets\Scripts\Item\Item.cs" />
      <Compile Include="Assets\Scripts\Item\ItemPickUp.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MenuSystem.cs" />
-     <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Terrain\Land.cs" />
      <Compile Include="Assets\Scripts\Test\exampleLand.cs" />
      <Compile Include="Assets\Scripts\Test\fileex.cs" />
      <Compile Include="Assets\Scripts\Test\MapObject.cs" />
+     <Compile Include="Assets\Scripts\Test\Move.cs" />
      <Compile Include="Assets\Scripts\Test\PerlinNoise.cs" />
      <Compile Include="Assets\Scripts\Test\TestCollision.cs" />
  <Reference Include="UnityEngine.UI">
