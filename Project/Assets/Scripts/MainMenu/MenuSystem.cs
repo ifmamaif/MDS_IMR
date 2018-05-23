@@ -1,5 +1,4 @@
-﻿//using System.Collections;
-using System.Collections.Generic;	//	List
+﻿using System.Collections.Generic;	//	List
 using UnityEngine;	// core , Random
 using UnityEngine.SceneManagement; //SceneManager
 using UnityEngine.UI; // Text
@@ -17,9 +16,6 @@ public class MenuSystem : MonoBehaviour {
 
 	public GameObject nameCharacterInputField;
 
-	private string[] listSavedGames;
-	//public GameObject contentSavedGames;
-	//public GameObject verticalScrollBarSavedGames;
 	private bool isVisibleSavedGames = false;
 	private Vector2 scrollViewVector = Vector2.zero;
 	private Vector2 guiDimension = new Vector2(410,340);
@@ -27,6 +23,8 @@ public class MenuSystem : MonoBehaviour {
 
 	public GameObject soundButton;
 	private bool isSoundMuted = false;
+
+	private string[] listSavedGames;
 
 	// Use this for initialization
 	void Start () {
@@ -38,33 +36,32 @@ public class MenuSystem : MonoBehaviour {
 		isVisibleSavedGames = false;
 	}
 
-	/*
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	*/
-
-
 	void OnGUI(){
 		if (isVisibleSavedGames == true) {
 			// Begin the ScrollView
 			scrollViewVector = GUI.BeginScrollView (new Rect (Screen.width / 2 - guiDimension.x / 2, Screen.height / 2 - guiDimension.y / 2, guiDimension.x, guiDimension.y), scrollViewVector, new Rect (0, 0, 0, longlist));
-
-			//Bottom right group of buttons
-			GUI.BeginGroup (new Rect (0, 0, guiDimension.x, longlist));
-			//Loop through each target
-			for (int i = 0; i < listSavedGames.Length; i++) {
-				//print("Button " + (i + 1).ToString() + " created: " + new Rect((i * 100), 0, 100, 50).ToString());
-				//Create a button for each target, loading the attached script with source and target coordinates
-				if (GUI.Button (	new Rect (	0, (i * 60) + (i * 10), guiDimension.x - 30, 60	) ,	listSavedGames[i]	)	) {
-					Debug.Log ("You pressed "+ listSavedGames[i]);
+			GUI.BeginGroup (new Rect (0, 0, guiDimension.x, longlist));	//	Bottom right group of buttons
+			int k=0;
+			for (int i = 0; i < listSavedGames.Length; i++) {	
+				string textSavedGame =  Filter (listSavedGames[i]);					
+				if (textSavedGame == ".") {	
+					k++;
+				} else if (textSavedGame == "..") {
+					k++;
+				} else {
+					if (GUI.Button (new Rect (0, ((i - k) * 60) + ((i - k) * 10), guiDimension.x - 90, 60),	textSavedGame)) {
+						Debug.Log ("You pressed " + textSavedGame);
+					}
+					if (GUI.Button (new Rect (guiDimension.x - 80, ((i - k) * 60) + ((i - k) * 10), 50, 60),	"X")) {						
+						Debug.Log ("You delete " + textSavedGame);
+						File.Delete(listSavedGames[i]);
+						File.Delete(listSavedGames[i]+".meta");
+						UpdateSavedGames ();
+					}
 				}
 			}
 			GUI.EndGroup ();
-
-			// End the ScrollView
-			GUI.EndScrollView ();
+			GUI.EndScrollView ();	//	End the ScrollView
 		}
 	}
 
@@ -115,6 +112,9 @@ public class MenuSystem : MonoBehaviour {
 
 	public void NewStart(){
 		string name = nameCharacterInputField.GetComponent<InputField> ().text;
+
+		Debug.Log ("Valid Name : " + IsValidNameCharacter (name));
+
 		string path = "Assets/Resources/Saved/" + name + ".data";
 		if (File.Exists (path) == false) {
 			FileStream f = new FileStream (path, FileMode.CreateNew);
@@ -142,22 +142,41 @@ public class MenuSystem : MonoBehaviour {
 		//SceneManager.LoadScene ("Game");
 	}
 
+	public static bool IsValidNameCharacter(string text){
+		for (int i = 0; i < text.Length; i++) {			
+			if (text [i] < '0' || text [i] > '9')
+			if (text [i] < 'a' || text [i] > 'z')
+			if (text [i] < 'A' || text [i] > 'Z')
+				return false;
+		}
+		return true;
+	}
+
 	public void ToSavedGames(){
-		savedGames.transform.localPosition= new Vector3 (0, 0, 0);
+		savedGames.transform.localPosition = new Vector3 (0, 0, 0);
 		mainMenu.SetActive (false);
 		savedGames.SetActive (true);
+
 		listSavedGames = Directory.GetFiles(Application.dataPath+ "/Resources/Saved","*.data");
-		for(int i=0;i<listSavedGames.Length;i++){
-			listSavedGames[i] = Filter (listSavedGames[i]);
-		}
-		isVisibleSavedGames = true;
-		int dimensiune = listSavedGames.Length * 70;
+
+		int dimensiune = listSavedGames.Length *70;
 		if (dimensiune > guiDimension.y) {
 			longlist = dimensiune + 10;
 		} else {
 			longlist = guiDimension.y;
 		}
 
+		isVisibleSavedGames = true;
+	}
+
+	public void UpdateSavedGames(){
+		listSavedGames = Directory.GetFiles (Application.dataPath + "/Resources/Saved", "*.data");
+		int dimensiune = listSavedGames.Length * 70;
+		if (dimensiune > guiDimension.y) {
+			longlist = dimensiune + 10;
+		} else {
+			longlist = guiDimension.y;
+		}
 	}
 
 	public void BackToMainMenuFromSavedGames(){		
@@ -185,13 +204,9 @@ public class MenuSystem : MonoBehaviour {
 	public void SoundVolume(){
 		if (isSoundMuted == false) {
 			isSoundMuted = true;
-			//soundButton.GetComponent<Image> ().over
-			//soundButton.GetComponent<Image>().overrideSprite = MyNewSprite;
 			soundButton.GetComponent<Image>().overrideSprite = Resources.Load<Sprite> ("Sprites/UI/1");
-			//soundButton.GetComponent<Image> ().sprite = Resources.Load<Sprite> ("UI/1");
 		} else {
 			isSoundMuted = false;
-			//soundButton.GetComponent<Image> ().sprite = Resources.Load<Sprite> ("UI/0");
 			soundButton.GetComponent<Image>().overrideSprite = Resources.Load<Sprite> ("Sprites/UI/0");
 		}
 	}
