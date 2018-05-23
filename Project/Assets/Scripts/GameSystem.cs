@@ -75,7 +75,9 @@ public class GameSystem : MonoBehaviour {
 				Vector2Int move = input.Control ();
 				terrain.Move (move, speed);
 				player.Move (move, speed);
-
+				if (Input.GetKeyDown (KeyCode.Escape)) {	
+					menuSystem.SetActive (!menuSystem.activeSelf);
+				}
 			} else {
 			
 				player.Move (new Vector2Int (0, 0), speed);
