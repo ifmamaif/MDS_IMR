@@ -14,6 +14,9 @@ public class MenuSystem : MonoBehaviour {
 	public GameObject alertMessage;
 	public GameObject settings;
 
+	private bool isHardMode = false;
+	public Button normalDifficultyButton;
+	public Button hardDifficultyButton;
 	public GameObject nameCharacterInputField;
 
 	private bool isVisibleSavedGames = false;
@@ -35,6 +38,8 @@ public class MenuSystem : MonoBehaviour {
 		newGame.SetActive (false);
 		newCharacter.SetActive (false);
 		alertMessage.SetActive (false);
+		settings.SetActive (false);
+		savedGames.SetActive (false);
 		isVisibleSavedGames = false;
 
 	}
@@ -121,43 +126,48 @@ public class MenuSystem : MonoBehaviour {
 	public void NewStart(){
 		string name = nameCharacterInputField.GetComponent<InputField> ().text;
 
-		Debug.Log ("Valid Name : " + IsValidNameCharacter (name));
+		if (IsValidNameCharacter (name) == true) {
 
-		string path = "Assets/Resources/Saved/" + name + ".data";
-		if (File.Exists (path) == false) {
-			FileStream f = new FileStream (path, FileMode.CreateNew);
+			string path = "Assets/Resources/Saved/" + name + ".data";
+			if (File.Exists (path) == false) {
+				FileStream f = new FileStream (path, FileMode.CreateNew);
 
-			float offSetX = UnityEngine.Random.Range (-99999f, 99999f);
-			byte[] byteArray = BitConverter.GetBytes(offSetX);
-			f.Write (byteArray,0,byteArray.Length);
+				int offSetX = UnityEngine.Random.Range (-99999, 99999);
+				Debug.Log ("Random X : " + offSetX);
+				byte[] byteArray = BitConverter.GetBytes (offSetX);
+				f.Write (byteArray, 0, byteArray.Length);
 
-			float offSetY = UnityEngine.Random.Range (-99999f, 99999f);
-			byteArray = BitConverter.GetBytes(offSetY);
-			f.Write (byteArray,0,byteArray.Length);
+				int offSetY = UnityEngine.Random.Range (-99999, 99999);
+				Debug.Log ("Random Y : " + offSetY);
+				byteArray = BitConverter.GetBytes (offSetY);
+				f.Write (byteArray, 0, byteArray.Length);
 
-			byteArray = System.Text.Encoding.UTF8.GetBytes(name);
-			f.Write (byteArray,0,byteArray.Length);
-			f.Close ();
-			//Debug.Log (name + " Character Saved!");
+				byteArray = System.Text.Encoding.UTF8.GetBytes (name);
+				f.Write (byteArray, 0, byteArray.Length);
 
-			path = "Assets/Resources/Config/whatToPlay.cfg";
-			f = new FileStream (path, FileMode.OpenOrCreate);
-			byte[] data = new byte[name.Length];
-			for(int i=0;i<name.Length;i++){
-				data[i]= (byte)name[i];
+				byteArray [0] = (byte)(isHardMode == true ? 1 : 0);
+				f.WriteByte (byteArray [0]);
+				f.Close ();
+				//Debug.Log (name + " Character Saved!");
+
+				path = "Assets/Resources/Config/whatToPlay.cfg";
+				f = new FileStream (path, FileMode.Create);
+				byte[] data = new byte[name.Length];
+				for (int i = 0; i < name.Length; i++) {
+					data [i] = (byte)name [i];
+					//Debug.Log (name [i]+" "+data[i]);
+				}
+				f.Write (data, 0, data.Length);
+				f.Close ();
+
+				GameSystem.ChangeLevelOfGame (GameSystem.levelSceneOfGame.game);
+
+			} else {
+				alertMessage.transform.localPosition = new Vector3 (0, 0, 0);
+				newCharacter.SetActive (false);
+				alertMessage.SetActive (true);
 			}
-			f.Write(data,0,data.Length);
-			f.Close();
-
-			GameSystem.ChangeLevelOfGame (GameSystem.levelSceneOfGame.game);
-
-		} else {
-			alertMessage.transform.localPosition= new Vector3 (0, 0, 0);
-			newCharacter.SetActive (false);
-			alertMessage.SetActive (true);
 		}
-
-
 	}
 
 	public static bool IsValidNameCharacter(string text){
@@ -244,15 +254,30 @@ public class MenuSystem : MonoBehaviour {
 	public void LoadSavedGame(){
 		if (whatSavedGame != "") {
 			string path = "Assets/Resources/Config/whatToPlay.cfg";
-			FileStream f = new FileStream (path, FileMode.Open);
+			FileStream f = new FileStream (path, FileMode.Create);
+
 			byte[] data = new byte[whatSavedGame.Length];
 			for (int i = 0; i < whatSavedGame.Length; i++) {
 				data [i] = (byte)whatSavedGame [i];
 			}
 			f.Write (data, 0, data.Length);
 			f.Close ();
+
 			GameSystem.ChangeLevelOfGame (GameSystem.levelSceneOfGame.game);
+
 		}
+	}
+
+	public void SetToNormalDifficulty(){
+		isHardMode = false;
+		normalDifficultyButton.interactable = false;
+		hardDifficultyButton.interactable = true;
+	}
+
+	public void SetToHardDifficulty(){		
+		isHardMode = true;
+		normalDifficultyButton.interactable = true;
+		hardDifficultyButton.interactable = false;
 	}
 }
 	

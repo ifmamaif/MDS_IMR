@@ -41,17 +41,115 @@ public class Land  {
 	public Land (Vector2Int screen) {
 		perlinWidth = screen.x + 2;
 		perlinHeight = screen.y + 2;
+		if (perlinWidth < perlinHeight)
+			perlinWidth = perlinHeight;
+		else
+			perlinHeight = perlinWidth;
+
+
+		string path = "Assets/Resources/Config/whatToPlay.cfg";
+		FileStream f = new FileStream (path, FileMode.Open);
+		int n = f.ReadByte ();
+		string name = ((char)n).ToString ();
+		for (int i = 1; i < f.Length; i++) {
+			n = f.ReadByte ();
+			name += ((char)n).ToString ();
+		}
+		f.Close ();
+
+		path = "Assets/Resources/Saved/" + name + ".data";
+		f = new FileStream (path, FileMode.Open);
+		byte[] byteArray = new byte[sizeof(int)];
+
+		f.Read (byteArray, 0, byteArray.Length);
+		perlinOffsetX =  (float)BitConverter.ToInt32(byteArray, 0);
+		f.Read (byteArray, 0, byteArray.Length);
+		perlinOffsetY = (float) BitConverter.ToInt32(byteArray, 0);
+
+		f.Close();
+
+		/*
+		//Debug.Log (perlinScale / perlinWidth + " " + perlinScale / perlinHeight + " :: " + perlinOffsetX + " " + perlinOffsetY);
+
+		//float newx = ((float)((int)(perlinOffsetX / (perlinScale / perlinWidth )))) *perlinScale / perlinWidth;
+		//float newy = ((float)((int)(perlinOffsetY / (perlinScale / perlinHeight)))) *perlinScale / perlinHeight;
+		//Debug.Log (perlinScale / perlinWidth + " " + perlinScale / perlinHeight + " :: " + perlinOffsetX + " " + perlinOffsetY + " :: "+ newx+" "+newy);
+
+
+		//Debug.Log ((perlinScale / perlinWidth));
+		//Debug.Log (1.0f*(float)(perlinScale / perlinWidth));
+		//Debug.Log (perlinOffsetX);
+		//Debug.Log (perlinOffsetX/(perlinScale / perlinWidth));
+		int nr = 0;
+		float aux = perlinOffsetX;
+		float a1 = perlinScale / perlinWidth;
+		bool wasNegative = false;
+		if (aux < 0) {
+			aux *= -1; 
+			wasNegative = true;
+		}
+		while (aux > 0) {
+			aux -= a1;
+			nr++;
+		}
+		//Debug.Log (nr);
+		//Debug.Log (nr * a1 * (wasNegative==true?(-1):1));
+		//Debug.Log (perlinScale + " " + perlinWidth + " " + perlinHeight);
+		Debug.Log (nr * a1 * (wasNegative == true ? (-1) : 1));
+
+		nr=0;
+		aux = perlinOffsetY;
+		a1 = perlinScale / perlinHeight;
+		wasNegative = false;
+		if (aux < 0) {
+			aux *= -1; 
+			wasNegative = true;
+		}
+		while (aux > 0) {
+			aux -= a1;
+			nr++;
+		}
+		Debug.Log(nr * a1 * (wasNegative == true ? (-1) : 1));
+
+
+
+		aux = perlinScale / perlinWidth;
+		wasNegative = false;
+		nr=0;
+		if (perlinOffsetX < 0) {
+			perlinOffsetX *= -1; 
+			wasNegative = true;
+		}
+		while (perlinOffsetX > 0) {
+			perlinOffsetX -= aux;
+			nr++;
+		}nr--;
+		perlinOffsetX = nr * aux * (wasNegative == true ? (-1) : 1);
+
+		aux = perlinScale / perlinHeight;
+		wasNegative = false;
+		nr=0;
+		if (perlinOffsetY < 0) {
+			perlinOffsetY *= -1; 
+			wasNegative = true;
+		}
+		while (perlinOffsetY > 0) {
+			perlinOffsetY -= aux;
+			nr++;
+		}nr--;
+		perlinOffsetY = nr * aux * (wasNegative == true ? (-1) : 1);
+
+		Debug.Log(perlinOffsetX+" "+perlinOffsetY);
+		*/
 
 		boardHolder = new GameObject ("Terrain");		//Instantiate Board and set boardHolder to its transform.
 
 		initialPosition = boardHolder.transform.position;
 
-		//terrain = new GameObject ("Land");	//	the land based on procedural generate by perlinnoise
-		terrain = GameObject.CreatePrimitive(PrimitiveType.Quad);
+		terrain = GameObject.CreatePrimitive(PrimitiveType.Quad);	//	the land based on procedural generate by perlinnoise
 		terrain.GetComponent<MeshCollider> ().enabled = false;
 		Material landMaterial = new Material(Shader.Find ("Unlit/Texture"));
 		landMaterial.name = "landMaterial";
-		//terrain.GetComponent<MeshRenderer> ().material = new Material (Shader.Find ("Unlit/Texture"));
 		terrain.GetComponent<MeshRenderer> ().material = landMaterial;
 		terrain.name = "Land";
 		terrain.transform.SetParent(boardHolder.transform);
