@@ -1867,12 +1867,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1921912735147296}
-        m_MethodName: 
+      - m_Target: {fileID: 114595102814386770}
+        m_MethodName: LoadSavedGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3789,6 +3789,7 @@ MonoBehaviour:
   settings: {fileID: 1990758119978666}
   nameCharacterInputField: {fileID: 1656169683122078}
   soundButton: {fileID: 1139436133445034}
+  textLoadButton: {fileID: 114234383973560696}
 --- !u!114 &114595119118508694
 MonoBehaviour:
   m_ObjectHideFlags: 1

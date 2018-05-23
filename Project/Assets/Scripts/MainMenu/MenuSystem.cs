@@ -25,6 +25,8 @@ public class MenuSystem : MonoBehaviour {
 	private bool isSoundMuted = false;
 
 	private string[] listSavedGames;
+	private string whatSavedGame="";
+	public Text textLoadButton;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +36,7 @@ public class MenuSystem : MonoBehaviour {
 		newCharacter.SetActive (false);
 		alertMessage.SetActive (false);
 		isVisibleSavedGames = false;
+
 	}
 
 	void OnGUI(){
@@ -50,12 +53,17 @@ public class MenuSystem : MonoBehaviour {
 					k++;
 				} else {
 					if (GUI.Button (new Rect (0, ((i - k) * 60) + ((i - k) * 10), guiDimension.x - 90, 60),	textSavedGame)) {
-						Debug.Log ("You pressed " + textSavedGame);
+						//Debug.Log ("You pressed " + textSavedGame);
+						whatSavedGame = textSavedGame;
+						textLoadButton.text = "Load " + whatSavedGame;
+
 					}
 					if (GUI.Button (new Rect (guiDimension.x - 80, ((i - k) * 60) + ((i - k) * 10), 50, 60),	"X")) {						
-						Debug.Log ("You delete " + textSavedGame);
+						//Debug.Log ("You delete " + textSavedGame);
 						File.Delete(listSavedGames[i]);
 						File.Delete(listSavedGames[i]+".meta");
+						textLoadButton.text = "Load";
+						whatSavedGame = "";
 						UpdateSavedGames ();
 					}
 				}
@@ -233,5 +241,18 @@ public class MenuSystem : MonoBehaviour {
 		settings.SetActive (true);
 	}
 		
+	public void LoadSavedGame(){
+		if (whatSavedGame != "") {
+			string path = "Assets/Resources/Config/whatToPlay.cfg";
+			FileStream f = new FileStream (path, FileMode.Open);
+			byte[] data = new byte[whatSavedGame.Length];
+			for (int i = 0; i < whatSavedGame.Length; i++) {
+				data [i] = (byte)whatSavedGame [i];
+			}
+			f.Write (data, 0, data.Length);
+			f.Close ();
+			GameSystem.ChangeLevelOfGame (GameSystem.levelSceneOfGame.game);
+		}
+	}
 }
 	
