@@ -44,4 +44,9 @@ public class Inventory {
 		if(onItemChangedCallBack != null)
 			onItemChangedCallBack.Invoke ();
 	}
+
+	public void DestroyGameObject(){
+		items.Clear ();
+
+	}
 }

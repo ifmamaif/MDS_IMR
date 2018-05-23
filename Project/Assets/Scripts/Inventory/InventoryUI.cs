@@ -32,6 +32,6 @@ public class InventoryUI : MonoBehaviour {
 				Debug.Log ("item cleared");
 			}
 		}
-
 	}
+
 }
