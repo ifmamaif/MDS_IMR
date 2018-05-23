@@ -140,4 +140,8 @@ public class Player	{
 		}
 	}
 	*/
+
+	public GameObject DestroyGameObject(){
+		return player;
+	}
 }

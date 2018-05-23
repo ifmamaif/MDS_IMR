@@ -120,26 +120,36 @@ public class MenuSystem : MonoBehaviour {
 			FileStream f = new FileStream (path, FileMode.CreateNew);
 
 			float offSetX = UnityEngine.Random.Range (-99999f, 99999f);
-			//Debug.Log (offSetX);
 			byte[] byteArray = BitConverter.GetBytes(offSetX);
 			f.Write (byteArray,0,byteArray.Length);
 
 			float offSetY = UnityEngine.Random.Range (-99999f, 99999f);
-			//Debug.Log (offSetY);
 			byteArray = BitConverter.GetBytes(offSetY);
 			f.Write (byteArray,0,byteArray.Length);
 
 			byteArray = System.Text.Encoding.UTF8.GetBytes(name);
 			f.Write (byteArray,0,byteArray.Length);
-			//SceneManager.LoadScene (1);
 			f.Close ();
-			Debug.Log (name + " Character Saved!");
+			//Debug.Log (name + " Character Saved!");
+
+			path = "Assets/Resources/Config/whatToPlay.cfg";
+			f = new FileStream (path, FileMode.OpenOrCreate);
+			byte[] data = new byte[name.Length];
+			for(int i=0;i<name.Length;i++){
+				data[i]= (byte)name[i];
+			}
+			f.Write(data,0,data.Length);
+			f.Close();
+
+			GameSystem.ChangeLevelOfGame (GameSystem.levelSceneOfGame.game);
+
 		} else {
 			alertMessage.transform.localPosition= new Vector3 (0, 0, 0);
 			newCharacter.SetActive (false);
 			alertMessage.SetActive (true);
 		}
-		//SceneManager.LoadScene ("Game");
+
+
 	}
 
 	public static bool IsValidNameCharacter(string text){
@@ -222,5 +232,6 @@ public class MenuSystem : MonoBehaviour {
 		mainMenu.SetActive (false);
 		settings.SetActive (true);
 	}
+		
 }
 	

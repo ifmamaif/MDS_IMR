@@ -159,4 +159,8 @@ public class Land  {
 		ColorUtility.TryParseHtmlString (hex, out myColor);
 		return myColor;
 	}
+
+	public GameObject DestroyGameObject(){		
+		return boardHolder;
+	}
 }
