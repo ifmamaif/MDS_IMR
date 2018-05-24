@@ -1,0 +1,307 @@
+<Project>
+  <Name>GameSystem</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>GameSystem</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Player</Name>
+        <Access>Public</Access>
+        <Location left="499" top="767" />
+        <Size width="235" height="186" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private GameObject player</Member>
+        <Member type="Field">private SpriteRenderer sprite</Member>
+        <Member type="Field">private Animator animator</Member>
+        <Member type="Constructor">public Player()</Member>
+        <Member type="Method">public void Move(Vector2Int move, int speed)</Member>
+        <Member type="Method">public GameObject DestroyGameObject()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InputManager</Name>
+        <Access>Public</Access>
+        <Location left="827" top="767" />
+        <Size width="192" height="186" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private short move = 0</Member>
+        <Member type="Constructor">public InputManager()</Member>
+        <Member type="Method">public Vector2Int SetMove()</Member>
+        <Member type="Method">public Vector2Int Control()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GameSystem</Name>
+        <Access>Public</Access>
+        <Location left="614" top="214" />
+        <Size width="322" height="366" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public CameraManager cam</Member>
+        <Member type="Field">public Land terrain</Member>
+        <Member type="Field">public Player player</Member>
+        <Member type="Field">public InputManager input</Member>
+        <Member type="Field">public int speed = 10</Member>
+        <Member type="Field">public AudioSource audiomanager</Member>
+        <Member type="Field">private Inventory inventory</Member>
+        <Member type="Field">private GameObject inventoryUI</Member>
+        <Member type="Field">private GameObject eventSystem</Member>
+        <Member type="Field">private GameObject menuSystem</Member>
+        <Member type="Field">private static int whatLevelSceneOfGameIs = (int)levelSceneOfGame.startUpMenu</Member>
+        <Member type="Field">private static bool changeLevelSceneOfGame = false</Member>
+        <Member type="Method">public void ExampleDelegate(short move)</Member>
+        <Member type="Method">void Start()</Member>
+        <Member type="Method">void Update()</Member>
+        <Member type="Method">void ChangeLevelStateOfGame()</Member>
+        <Member type="Method">public static void ChangeLevelOfGame(levelSceneOfGame level)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>levelSceneOfGame</Name>
+        <Access>Public</Access>
+        <Location left="996" top="329" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>startUpMenu</Value>
+        <Value>game</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>MonoBehaviour</Name>
+        <Access>Public</Access>
+        <Location left="697" top="86" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CameraManager</Name>
+        <Access>Public</Access>
+        <Location left="219" top="214" />
+        <Size width="261" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private GameObject objectCamera</Member>
+        <Member type="Field">public Camera cam</Member>
+        <Member type="Field">public bool isZoomChanged = false</Member>
+        <Member type="Constructor">public CameraManager()</Member>
+        <Member type="Method">public void ChangeOrthographicSize(float value)</Member>
+        <Member type="Method">public void SetOrthographicSize(float size)</Member>
+        <Member type="Method">public Vector2Int GetScreen()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MenuSystem</Name>
+        <Access>Public</Access>
+        <Location left="219" top="527" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Inventory</Name>
+        <Access>Public</Access>
+        <Location left="69" top="667" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InventoryUI</Name>
+        <Access>Public</Access>
+        <Location left="328" top="667" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="2" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>961</X>
+          <Y>288</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1062</X>
+          <Y>304</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>544</X>
+          <Y>311</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="2" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>589</X>
+          <Y>276</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>510</X>
+          <Y>244</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>190</X>
+          <Y>477</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="2" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>589</X>
+          <Y>428</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="8" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="8">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>589</X>
+          <Y>396</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>555</X>
+          <Y>691</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>589</X>
+          <Y>378</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>181</X>
+          <Y>737</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>191</X>
+          <Y>585</Y>
+        </BendPoint>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Menu System</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>MenuSystem</Name>
+        <Access>Public</Access>
+        <Location left="286" top="152" />
+        <Size width="280" height="808" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public GameObject mainMenu</Member>
+        <Member type="Field">public GameObject newGame</Member>
+        <Member type="Field">public GameObject savedGames</Member>
+        <Member type="Field">public GameObject exitMessage</Member>
+        <Member type="Field">public GameObject newCharacter</Member>
+        <Member type="Field">public GameObject alertMessage</Member>
+        <Member type="Field">public GameObject settings</Member>
+        <Member type="Field">private bool isHardMode = false</Member>
+        <Member type="Field">public Button normalDifficultyButton</Member>
+        <Member type="Field">public Button hardDifficultyButton</Member>
+        <Member type="Field">public GameObject nameCharacterInputField</Member>
+        <Member type="Field">private bool isVisibleSavedGames = false</Member>
+        <Member type="Field">private Vector2 scrollViewVector = Vector2.zero</Member>
+        <Member type="Field">private Vector2 guiDimension = new Vector2(410,340)</Member>
+        <Member type="Field">private float longlist = 0</Member>
+        <Member type="Field">public GameObject soundButton</Member>
+        <Member type="Field">private bool isSoundMuted = false</Member>
+        <Member type="Field">private string[] listSavedGames</Member>
+        <Member type="Field">private string whatSavedGame = ""</Member>
+        <Member type="Field">public Text textLoadButton</Member>
+        <Member type="Method">void Start()</Member>
+        <Member type="Method">void OnGUI()</Member>
+        <Member type="Method">public void BackToMainMenuFromExit()</Member>
+        <Member type="Method">public void ToExitGame()</Member>
+        <Member type="Method">public void GooGoodBye()</Member>
+        <Member type="Method">public void BackToMainMenuFromNewGame()</Member>
+        <Member type="Method">public void ToNewGame()</Member>
+        <Member type="Method">public void BackToMainMenuFromNewCharacter()</Member>
+        <Member type="Method">public void ToNewCharacter()</Member>
+        <Member type="Method">public void BackToNewCharacter()</Member>
+        <Member type="Method">public void NewStart()</Member>
+        <Member type="Method">public static bool IsValidNameCharacter(string text)</Member>
+        <Member type="Method">public void ToSavedGames()</Member>
+        <Member type="Method">public void UpdateSavedGames()</Member>
+        <Member type="Method">public void NewMethod()</Member>
+        <Member type="Method">public void BackToMainMenuFromSavedGames()</Member>
+        <Member type="Method">string Filter(string stringSource)</Member>
+        <Member type="Method">public void SoundVolume()</Member>
+        <Member type="Method">public void BackToMainMenuFromSettings()</Member>
+        <Member type="Method">public void ToSettings()</Member>
+        <Member type="Method">public void LoadSavedGame()</Member>
+        <Member type="Method">public void SetToNormalDifficulty()</Member>
+        <Member type="Method">public void SetToHardDifficulty()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MonoBehaviour</Name>
+        <Access>Public</Access>
+        <Location left="345" top="51" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="0" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
