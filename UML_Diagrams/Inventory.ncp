@@ -1,0 +1,226 @@
+<Project>
+  <Name>Inventory</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Inventory</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Inventory</Name>
+        <Access>Public</Access>
+        <Location left="280" top="728" />
+        <Size width="264" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public static Inventory instance</Member>
+        <Member type="Field">public int Space = 20</Member>
+        <Member type="Field">public List&lt;Item&gt; items = new List&lt;Item&gt;()</Member>
+        <Member type="Field">public onItemChanged onItemChangedCallback</Member>
+        <Member type="Method">public void OnItemChanged()</Member>
+        <Member type="Method">void Awake()</Member>
+        <Member type="Method">public bool Add(Item item)</Member>
+        <Member type="Method">public void Remove(Item item)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InventorySlot</Name>
+        <Access>Public</Access>
+        <Location left="782" top="728" />
+        <Size width="198" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Item item</Member>
+        <Member type="Field">public Image icon</Member>
+        <Member type="Field">public Button removeButton</Member>
+        <Member type="Method">public void AddItem(Item newItem)</Member>
+        <Member type="Method">public void ClearSlot()</Member>
+        <Member type="Method">public void OnRemoveButton()</Member>
+        <Member type="Method">public void UseItem()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Item</Name>
+        <Access>Public</Access>
+        <Location left="567" top="1011" />
+        <Size width="201" height="156" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public new string name = "Nume item"</Member>
+        <Member type="Field">public Sprite icon = null</Member>
+        <Member type="Field">public bool isDefaultItem = false</Member>
+        <Member type="Method">public virtual void Use()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InventoryUI</Name>
+        <Access>Public</Access>
+        <Location left="600" top="476" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Transform itemsParent</Member>
+        <Member type="Field">public GameObject inventoryUI</Member>
+        <Member type="Field">Inventory inventory</Member>
+        <Member type="Field">InventorySlot[] slots</Member>
+        <Member type="Method">void Start()</Member>
+        <Member type="Method">void Update()</Member>
+        <Member type="Method">void UpdateUI()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ItemPickUp</Name>
+        <Access>Public</Access>
+        <Location left="366" top="1177" />
+        <Size width="162" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Item item</Member>
+        <Member type="Method">public override void Interact()</Member>
+        <Member type="Method">void PickUp()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Interactable</Name>
+        <Access>Public</Access>
+        <Location left="808" top="1177" />
+        <Size width="240" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public virtual void Interact()</Member>
+        <Member type="Method">void OnTriggerEnter2D(Collider2D other)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MonoBehaviour</Name>
+        <Access>Public</Access>
+        <Location left="391" top="400" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ScriptableObject</Name>
+        <Access>Public</Access>
+        <Location left="580" top="873" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="3" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>854</X>
+          <Y>703</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="6">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>992</X>
+          <Y>1152</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="5">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>553</X>
+          <Y>1200</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>777</X>
+          <Y>1200</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>686</X>
+          <Y>983</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>686</X>
+          <Y>962</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="1" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>757</X>
+          <Y>791</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>757</X>
+          <Y>986</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>787</X>
+          <Y>592</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>575</X>
+          <Y>572</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>503</X>
+          <Y>694</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>255</X>
+          <Y>824</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>542</X>
+          <Y>1029</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>341</X>
+          <Y>1239</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>542</X>
+          <Y>1029</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
