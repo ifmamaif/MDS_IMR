@@ -15,10 +15,12 @@ public class GameSystem : MonoBehaviour {
 	private GameObject eventSystem;
 
 	private GameObject menuSystem;
+	private GameObject menuGame;
 
 	public enum levelSceneOfGame{
 		startUpMenu,
-		game
+		game,
+		newgame
 	};
 	private static int whatLevelSceneOfGameIs = (int)levelSceneOfGame.startUpMenu;
 	private static bool changeLevelSceneOfGame = false;
@@ -35,8 +37,6 @@ public class GameSystem : MonoBehaviour {
 		eventSystem.AddComponent<StandaloneInputModule> ();
 
 		input = new InputManager();
-
-
 
 		/*		
 		gameObject.AddComponent<AudioSource> ();
@@ -65,9 +65,8 @@ public class GameSystem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (changeLevelSceneOfGame == true) {
-			
-			ChangeLevelStateOfGame ();
 			changeLevelSceneOfGame = false;
+			ChangeLevelStateOfGame ();
 
 		} else if (whatLevelSceneOfGameIs == (int)levelSceneOfGame.game) {
 			if (Input.anyKey == true) {
@@ -76,7 +75,7 @@ public class GameSystem : MonoBehaviour {
 				terrain.Move (move, speed);
 				player.Move (move, speed);
 				if (Input.GetKeyDown (KeyCode.Escape)) {	
-					menuSystem.SetActive (!menuSystem.activeSelf);
+					menuGame.SetActive (!menuGame.activeSelf);
 				}
 			} else {
 			
@@ -87,9 +86,29 @@ public class GameSystem : MonoBehaviour {
 	}
 
 	void ChangeLevelStateOfGame(){
-		if (whatLevelSceneOfGameIs == (int)levelSceneOfGame.game) {
-			menuSystem.SetActive (false);
+		if (whatLevelSceneOfGameIs == (int)levelSceneOfGame.newgame) {		// am bug aici , se blocheaza
+			Destroy (terrain.DestroyGameObject());
+			Destroy (player.DestroyGameObject());
+			//inventory.DestroyGameObject();
+			Destroy (inventoryUI);
+			Destroy (menuGame);
 
+			Vector2Int backScreen = (Vector2Int)cam.GetScreen ();
+			terrain = new Land (backScreen);
+			player = new Player ();
+
+			//inventory = new Inventory ();
+			//inventory.Space = 20;
+
+			inventoryUI = (GameObject)Instantiate (Resources.Load ("Prefabs/InventoryUI", typeof(GameObject)));
+			inventoryUI.name = "InventoryUI";
+
+			menuGame = (GameObject)Instantiate (Resources.Load ("Prefabs/MenuGame", typeof(GameObject)));
+			menuGame.SetActive (false);
+
+		} else if (whatLevelSceneOfGameIs == (int)levelSceneOfGame.game) {
+			
+			Destroy (menuSystem);
 			Vector2Int backScreen = (Vector2Int)cam.GetScreen ();
 			terrain = new Land (backScreen);
 			player = new Player ();
@@ -100,14 +119,19 @@ public class GameSystem : MonoBehaviour {
 			inventoryUI = (GameObject)Instantiate (Resources.Load ("Prefabs/InventoryUI", typeof(GameObject)));
 			inventoryUI.name = "InventoryUI";
 
-		} else {
-			
+			menuGame = (GameObject)Instantiate (Resources.Load ("Prefabs/MenuGame", typeof(GameObject)));
+			menuGame.SetActive (false);
+
+		} else if (whatLevelSceneOfGameIs == (int)levelSceneOfGame.startUpMenu) {
+			menuSystem = (GameObject)Instantiate(Resources.Load("Prefabs/MenuSystem",typeof(GameObject)));
+			menuSystem.name = "MenuSystem";
+
 			menuSystem.SetActive (true);
 			Destroy (terrain.DestroyGameObject());
 			Destroy (player.DestroyGameObject());
 			inventory.DestroyGameObject();
 			Destroy (inventoryUI);
-
+			Destroy (menuGame);
 		}
 	}
 
