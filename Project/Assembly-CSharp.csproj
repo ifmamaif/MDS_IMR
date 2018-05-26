@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera\CameraManager.cs" />
-     <Compile Include="Assets\Scripts\fileio.cs" />
      <Compile Include="Assets\Scripts\GameSystem.cs" />
      <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
@@ -61,12 +60,14 @@
      <Compile Include="Assets\Scripts\Item\Interactable.cs" />
      <Compile Include="Assets\Scripts\Item\Item.cs" />
      <Compile Include="Assets\Scripts\Item\ItemPickUp.cs" />
+     <Compile Include="Assets\Scripts\MainMenu\MenuGame.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MenuSystem.cs" />
      <Compile Include="Assets\Scripts\Player\InputManager.cs" />
      <Compile Include="Assets\Scripts\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Terrain\Land.cs" />
      <Compile Include="Assets\Scripts\Test\exampleLand.cs" />
      <Compile Include="Assets\Scripts\Test\fileex.cs" />
+     <Compile Include="Assets\Scripts\Test\fileio.cs" />
      <Compile Include="Assets\Scripts\Test\Landv2.cs" />
      <Compile Include="Assets\Scripts\Test\MapObject.cs" />
      <Compile Include="Assets\Scripts\Test\Move.cs" />

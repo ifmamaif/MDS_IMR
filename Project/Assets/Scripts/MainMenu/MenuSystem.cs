@@ -51,7 +51,7 @@ public class MenuSystem : MonoBehaviour {
 			GUI.BeginGroup (new Rect (0, 0, guiDimension.x, longlist));	//	Bottom right group of buttons
 			int k=0;
 			for (int i = 0; i < listSavedGames.Length; i++) {	
-				string textSavedGame =  Filter (listSavedGames[i]);					
+				string textSavedGame =  IMFile.Filter (listSavedGames[i]);					
 				if (textSavedGame == ".") {	
 					k++;
 				} else if (textSavedGame == "..") {
@@ -131,15 +131,22 @@ public class MenuSystem : MonoBehaviour {
 			string path = "Assets/Resources/Saved/" + name + ".data";
 			if (File.Exists (path) == false) {
 				FileStream f = new FileStream (path, FileMode.CreateNew);
-
+				byte[] byteArray;
+				/*
 				int offSetX = UnityEngine.Random.Range (-99999, 99999);
 				Debug.Log ("Random X : " + offSetX);
-				byte[] byteArray = BitConverter.GetBytes (offSetX);
+				byteArray = BitConverter.GetBytes (offSetX);
 				f.Write (byteArray, 0, byteArray.Length);
 
 				int offSetY = UnityEngine.Random.Range (-99999, 99999);
 				Debug.Log ("Random Y : " + offSetY);
 				byteArray = BitConverter.GetBytes (offSetY);
+				f.Write (byteArray, 0, byteArray.Length);
+				*/
+
+				byteArray = BitConverter.GetBytes ((int)0);
+				f.Write (byteArray, 0, byteArray.Length);
+				byteArray = BitConverter.GetBytes ((int)0);
 				f.Write (byteArray, 0, byteArray.Length);
 
 				byteArray = System.Text.Encoding.UTF8.GetBytes (name);
@@ -159,7 +166,7 @@ public class MenuSystem : MonoBehaviour {
 				}
 				f.Write (data, 0, data.Length);
 				f.Close ();
-
+				BackToMainMenuFromNewCharacter ();
 				GameSystem.ChangeLevelOfGame (GameSystem.levelSceneOfGame.game);
 
 			} else {
@@ -213,21 +220,7 @@ public class MenuSystem : MonoBehaviour {
 		mainMenu.SetActive (true);
 	}
 
-	string Filter(string stringSource){
-		int positionLastSlash = 0;
-		int positionDot =0;
-		for (int i = 0; i < stringSource.Length; i++) {
-			if (stringSource [i] == '/')
-				positionLastSlash = i+1;
-			else if (stringSource [i] == '.')
-				positionDot = i;
-		}
-		string result = new string (stringSource [positionLastSlash], 1);
-		for(int i=positionLastSlash+1;i<positionDot;i++){
-			result += stringSource[i];
-		}
-		return result;
-	}
+
 
 	public void SoundVolume(){
 		if (isSoundMuted == false) {
